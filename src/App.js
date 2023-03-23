@@ -24,10 +24,10 @@ function App() {
     }
   };
 
-  console.log(meanings);
-
   useEffect(() => {
-    dictionaryApi();
+    if (word) {
+      dictionaryApi();
+    }
     // eslint-disable-next-line
   }, [word, category]);
 

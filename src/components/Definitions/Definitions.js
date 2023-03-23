@@ -2,7 +2,6 @@ import React from "react";
 import "./Definitions.css";
 
 const Definitions = ({ meanings, word, LightTheme, category }) => {
-  console.log("word===", word);
   return (
     <div className="meanings">
       {/* audio---------------------------- */}
@@ -47,12 +46,17 @@ const Definitions = ({ meanings, word, LightTheme, category }) => {
           )
         )
       )}
-      {word.length !== 0 && (
-        <span className="subTitle">
-          Sorry User, we couldn't find definitions for the word you were looking
-          for.
-        </span>
-      )}
+      {
+        word.length !== 0 &&
+        <>
+          {meanings.length <= 0 && (
+            <span className="subTitle">
+              Sorry User, we couldn't find definitions for the word you were looking
+              for.
+            </span>
+          )}
+        </>
+      }
     </div>
   );
 };

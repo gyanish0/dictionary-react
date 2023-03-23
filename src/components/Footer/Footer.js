@@ -22,7 +22,7 @@ const Footer = () => {
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         <a href="https://www.twitter.com/srivastavgyani1" target="__blank">
-          <i class="fab fa-twitter-square fa-2x"></i>
+          <i className="fab fa-twitter-square fa-2x"></i>
         </a>
       </div>
     </div>
